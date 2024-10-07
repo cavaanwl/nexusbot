@@ -17,13 +17,13 @@ function displayMessage(message, sender) {
 
 function getBotResponse(input) {
     // Logique simple de réponse basée sur le texte de l'utilisateur
-    if (input.toLowerCase().includes('bonjour')) {
+    if (chatbox.toLowerCase().includes('bonjour')) {
         return ('Bonjour! Comment puis-je vous aider?');
-    } else if (input.toLowerCase().includes('comment ça va')) {
+    } else if (chatbox.toLowerCase().includes('comment ça va')) {
         return ('Je suis juste un programme, mais merci de demander!');
-    } else if (input.toLowerCase().includes('aide')) {
+    } else if (chatbox.toLowerCase().includes('aide')) {
         return 'Que puis-je faire pour vous?';
-    } else if (input.toLowerCase().includes('')) {
+    } else if (chatbox.toLowerCase().includes('')) {
         return ('Désolé, je ne comprends pas votre demande.');
     }
     else if (input.toLowerCase().includes('comment puis-je contacter les studios Arcade Studio ?'))
