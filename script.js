@@ -15,7 +15,7 @@ function displayMessage(message, sender) {
     getBotResponse();
 }
 
-function getBotResponse(input) {
+function getBotResponse(chatbox) {
     // Logique simple de réponse basée sur le texte de l'utilisateur
     if (chatbox.toLowerCase().includes('bonjour')) {
         return ('Bonjour! Comment puis-je vous aider?');
