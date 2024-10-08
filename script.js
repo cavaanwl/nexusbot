@@ -1,11 +1,10 @@
 function send() {
     var userInput = document.getElementById('userInput').value;
     displayMessage(userInput, 'user');
-    document.getElementById('userInput').value = '';
-    displayMessage();
 }
 
 function displayMessage(message, sender) {
+    document.getElementById('userInput').value = '';
     var chatbox = document.getElementById('chatbox');
     var messageDiv = document.createElement('div');
     messageDiv.classList.add('message', sender);
