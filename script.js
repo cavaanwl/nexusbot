@@ -18,17 +18,17 @@ function displayMessage(message, sender) {
 }
 
 function getBotResponse(chatbox) {
-    if (chatbox.toLowerCase().includes('bonjour')) {
+    if (chatbox.includes('bonjour')) {
         var reponseDiv = document.createElement('div');
         reponseDiv.classList.add('message', sender);
         reponseDiv.textContent = 'Bonjour! Comment puis-je vous aider ?';
         chatbox.appendChild(reponseDiv);
-    } else if (chatbox.toLowerCase().includes('comment ça va')) {
+    } else if (chatbox.includes('comment ça va')) {
         var reponseDiv = document.createElement('div');
         reponseDiv.classList.add('message', sender);
         reponseDiv.textContent = 'Je suis juste un programme, mais merci de demander !';
         chatbox.appendChild(reponseDiv);
-    } else if (chatbox.toLowerCase().includes('aide')) {
+    } else if (chatbox.includes('aide')) {
         var reponseDiv = document.createElement('div');
         reponseDiv.classList.add('message', sender);
         reponseDiv.textContent = 'Que puis-je faire pour vous ?';
@@ -39,7 +39,7 @@ function getBotResponse(chatbox) {
         reponseDiv.textContent = 'Veuillez remplire la barre de text.';
         chatbox.appendChild(reponseDiv);
     }
-    else if (input.toLowerCase().includes('contacter Arcade Studio'))
+    else if (chatbox.includes('contacter'))
         var reponseDiv = document.createElement('div');
         reponseDiv.classList.add('message', sender);
         reponseDiv.textContent = 'Vous pouvez contacter Arcade Studio via l\'adresse mail arcade.studio@gmail.com.';
