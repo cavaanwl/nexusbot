@@ -9,6 +9,7 @@ function displayMessage(message, sender) {
     var br = document.createElement('br');
     var messageDiv = document.createElement('div');
     messageDiv.classList.add('message', sender);
+    br.classList.add('message', sender);
     messageDiv.textContent = message;
     chatbox.appendChild(messageDiv);
     chatbox.appendChild(br);
@@ -17,18 +18,32 @@ function displayMessage(message, sender) {
 }
 
 function getBotResponse(chatbox) {
-    // Logique simple de réponse basée sur le texte de l'utilisateur
     if (chatbox.toLowerCase().includes('bonjour')) {
-        return ('Bonjour! Comment puis-je vous aider?');
+        var reponseDiv = document.createElement('div');
+        reponseDiv.classList.add('message', sender);
+        reponseDiv.textContent = 'Bonjour! Comment puis-je vous aider ?';
+        chatbox.appendChild(reponseDiv);
     } else if (chatbox.toLowerCase().includes('comment ça va')) {
-        return ('Je suis juste un programme, mais merci de demander!');
+        var reponseDiv = document.createElement('div');
+        reponseDiv.classList.add('message', sender);
+        reponseDiv.textContent = 'Je suis juste un programme, mais merci de demander !';
+        chatbox.appendChild(reponseDiv);
     } else if (chatbox.toLowerCase().includes('aide')) {
-        return 'Que puis-je faire pour vous?';
-    } else if (chatbox.toLowerCase().includes('')) {
-        return ('Désolé, je ne comprends pas votre demande.');
+        var reponseDiv = document.createElement('div');
+        reponseDiv.classList.add('message', sender);
+        reponseDiv.textContent = 'Que puis-je faire pour vous ?';
+        chatbox.appendChild(reponseDiv);
+    } else if (chatbox === '') {
+        var reponseDiv = document.createElement('div');
+        reponseDiv.classList.add('message', sender);
+        reponseDiv.textContent = 'Veuillez remplire la barre de text.';
+        chatbox.appendChild(reponseDiv);
     }
-    else if (input.toLowerCase().includes('comment puis-je contacter les studios Arcade Studio ?'))
-        return ("Vous pouvez contacter Arcade Studio via l'adresse mail arcade.studio@gmail.com.");
+    else if (input.toLowerCase().includes('contacter Arcade Studio'))
+        var reponseDiv = document.createElement('div');
+        reponseDiv.classList.add('message', sender);
+        reponseDiv.textContent = 'Vous pouvez contacter Arcade Studio via l\'adresse mail arcade.studio@gmail.com.';
+        chatbox.appendChild(reponseDiv);
 }
 
 //gestion du clavier :
