@@ -14,7 +14,7 @@ function displayMessage(message, sender) {
     chatbox.appendChild(messageDiv);
     chatbox.appendChild(br);
     chatbox.scrollTop = chatbox.scrollHeight; // Scroll vers le bas
-    getBotResponse();
+    getBotResponse(message);
 }
 
 function getBotResponse(message) {
