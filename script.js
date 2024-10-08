@@ -4,12 +4,14 @@ function send() {
 }
 
 function displayMessage(message, sender) {
-    document.getElementById('userInput').value = '';
+    document.getElementById('userInput').value = ''; 
     var chatbox = document.getElementById('chatbox');
+    var br = document.createElement('br');
     var messageDiv = document.createElement('div');
     messageDiv.classList.add('message', sender);
     messageDiv.textContent = message;
     chatbox.appendChild(messageDiv);
+    chatbox.appendChild(br);
     chatbox.scrollTop = chatbox.scrollHeight; // Scroll vers le bas
     getBotResponse();
 }
