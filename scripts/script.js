@@ -1,6 +1,6 @@
 function send() {
     var textinput = document.getElementById('userInput').value;
-    displayMessage(userInput, 'user');
+    displayMessage(textinput, 'user');
 }
 
 function displayMessage(message, sender) {
