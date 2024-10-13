@@ -36,7 +36,7 @@ function getBotResponse() {
     } else if (textinput === '') {
         var reponseDiv = document.createElement('div');
         reponseDiv.classList.add('message', "user");
-        reponseDiv.textContent = 'Veuillez remplire la barre de text.';
+        reponseDiv.textContent = 'Veuillez remplire la barre de texte.';
         chatbox.appendChild(reponseDiv);
     }
     else if (textinput.includes('contacter')){
