@@ -1,5 +1,4 @@
 function send() {
-    var userInput = document.getElementById('userInput').value;
     var textinput = document.getElementById('userInput').value;
     displayMessage(userInput, 'user');
 }
