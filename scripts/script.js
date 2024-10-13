@@ -1,5 +1,6 @@
 function send() {
     var userInput = document.getElementById('userInput').value;
+    var textinput = document.getElementById('userInput').value;
     displayMessage(userInput, 'user');
 }
 
@@ -18,30 +19,30 @@ function displayMessage(message, sender) {
 }
 
 function getBotResponse() {
-    if (sender.includes('bonjour')) {
+    if (textinput.includes('bonjour')) {
         var reponseDiv = document.createElement('div');
-        reponseDiv.classList.add('message', sender);
+        reponseDiv.classList.add('message', textinput);
         reponseDiv.textContent = 'Bonjour! Comment puis-je vous aider ?';
         chatbox.appendChild(reponseDiv);
-    } else if (sender.includes('comment ça va')) {
+    } else if (textinput.includes('comment ça va')) {
         var reponseDiv = document.createElement('div');
-        reponseDiv.classList.add('message', sender);
+        reponseDiv.classList.add('message', textinput);
         reponseDiv.textContent = 'Je suis juste un programme, mais merci de demander !';
         chatbox.appendChild(reponseDiv);
-    } else if (sender.includes('aide')) {
+    } else if (textinput.includes('aide')) {
         var reponseDiv = document.createElement('div');
-        reponseDiv.classList.add('message', sender);
+        reponseDiv.classList.add('message', textinput);
         reponseDiv.textContent = 'Que puis-je faire pour vous ?';
         chatbox.appendChild(reponseDiv);
-    } else if (sender === '') {
+    } else if (textinput === '') {
         var reponseDiv = document.createElement('div');
-        reponseDiv.classList.add('message', sender);
+        reponseDiv.classList.add('message', textinput);
         reponseDiv.textContent = 'Veuillez remplire la barre de text.';
         chatbox.appendChild(reponseDiv);
     }
-    else if (sender.includes('contacter'))
+    else if (textinput.includes('contacter'))
         var reponseDiv = document.createElement('div');
-        reponseDiv.classList.add('message', sender);
+        reponseDiv.classList.add('message', textinput);
         reponseDiv.textContent = 'Vous pouvez contacter Arcade Studio via l\'adresse mail arcade.studio@gmail.com.';
         chatbox.appendChild(reponseDiv);
 }
