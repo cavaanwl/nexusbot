@@ -1,16 +1,17 @@
 function send() {
     var textinput = document.getElementById('userInput').value;
+    var test = textinput;
     console.log(textinput);
-    displayMessage(textinput, 'user');
+    show(textinput);
 }
 
-function displayMessage(message, sender) {
+function show(message) {
     document.getElementById('userInput').value = ''; 
     var chatbox = document.getElementById('chatbox');
     var br = document.createElement('br');
     var messageDiv = document.createElement('div');
-    messageDiv.classList.add('message', sender);
-    br.classList.add('message', sender);
+    messageDiv.classList.add('message', "user");
+    br.classList.add('message', "user");
     messageDiv.textContent = message;
     chatbox.appendChild(messageDiv);
     chatbox.appendChild(br);
