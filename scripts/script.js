@@ -4,6 +4,7 @@ function send() {
 }
 
 function show(message) {
+    console.log("textinput");
     document.getElementById('userInput').value = ''; 
     var chatbox = document.getElementById('chatbox');
     var br = document.createElement('br');
@@ -14,10 +15,11 @@ function show(message) {
     chatbox.appendChild(messageDiv);
     chatbox.appendChild(br);
     chatbox.scrollTop = chatbox.scrollHeight; // Scroll vers le bas
-    getBotResponse();
+    bot();
 }
 
-function getBotResponse() {
+function bot() {
+    console.log("textinput");
     if (textinput === 'bonjour') {
         var reponseDiv = document.createElement('div');
         reponseDiv.classList.add('message', "user");
