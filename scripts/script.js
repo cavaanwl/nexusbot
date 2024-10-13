@@ -39,7 +39,7 @@ function getBotResponse() {
         reponseDiv.textContent = 'Veuillez remplire la barre de text.';
         chatbox.appendChild(reponseDiv);
     }
-    else if (textinput === 'contacter'))
+    else if (textinput === 'contacter')
         var reponseDiv = document.createElement('div');
         reponseDiv.classList.add('message', "user");
         reponseDiv.textContent = 'Vous pouvez contacter Arcade Studio via l\'adresse mail arcade.studio@gmail.com.';
