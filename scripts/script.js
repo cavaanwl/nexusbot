@@ -1,5 +1,6 @@
 function send() {
     var textinput = document.getElementById('userInput').value;
+    console.log(textinput);
     displayMessage(textinput, 'user');
 }
 
