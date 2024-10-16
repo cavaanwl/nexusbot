@@ -21,7 +21,7 @@ function send() {
     chatbox.scrollTop = chatbox.scrollHeight;
     let vartest = textinput;
 
-    if vartest === "bonjour" {
+    if (vartest === "bonjour") {
         var reponseDiv = document.createElement('div');
         reponseDiv.classList.add('message', "user");
         reponseDiv.textContent = 'Bonjour! Comment puis-je vous aider ?';
