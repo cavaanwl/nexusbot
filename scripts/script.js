@@ -19,10 +19,6 @@ function send() {
     chatbox.appendChild(br);
 
     chatbox.scrollTop = chatbox.scrollHeight;
-    reponses();
-}
-
-function reponses() {
     let vartest = textinput;
 
     if (vartest.includes('bonjour')) {
