@@ -23,7 +23,7 @@ function send() {
         reponseDiv.classList.add('message', "user");
         reponseDiv.textContent = 'Bonjour! Comment puis-je vous aider ?';
         chatbox.appendChild(reponseDiv);
-    } else if (vartest.includes('comment ça va')) {
+    } else if (vartest.includes('ça va')) {
         var reponseDiv = document.createElement('div');
         reponseDiv.classList.add('message', "user");
         reponseDiv.textContent = 'Je suis juste un programme, mais merci de demander !';
