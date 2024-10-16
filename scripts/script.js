@@ -10,7 +10,7 @@ function send() {
     br.classList.add('message', "user");
 
     if (textinput === "") {
-        textinput = "<i>Question vide</i>";
+        textinput = "Veuillez remplire la barre de texte.";
     }
 
     messageDiv.textContent = textinput;
@@ -21,7 +21,7 @@ function send() {
     chatbox.scrollTop = chatbox.scrollHeight;
     let vartest = textinput;
 
-    if (vartest.includes('bonjour')) {
+    if vartest === "bonjour" {
         var reponseDiv = document.createElement('div');
         reponseDiv.classList.add('message', "user");
         reponseDiv.textContent = 'Bonjour! Comment puis-je vous aider ?';
@@ -36,13 +36,7 @@ function send() {
         reponseDiv.classList.add('message', "user");
         reponseDiv.textContent = 'Que puis-je faire pour vous ?';
         chatbox.appendChild(reponseDiv);
-    } else if (vartest === '') {
-        var reponseDiv = document.createElement('div');
-        reponseDiv.classList.add('message', "user");
-        reponseDiv.textContent = 'Veuillez remplire la barre de texte.';
-        chatbox.appendChild(reponseDiv);
-    }
-    else if (vartest.includes('contacter')){
+    } else if (vartest.includes('contacter')){
         var reponseDiv = document.createElement('div');
         reponseDiv.classList.add('message', "user");
         reponseDiv.textContent = 'Vous pouvez contacter Arcade Studio via l\'adresse mail arcade.studio@gmail.com.';
