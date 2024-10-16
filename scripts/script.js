@@ -3,11 +3,9 @@ function send() {
     document.getElementById('userInput').value = ''; 
 
     var chatbox = document.getElementById('chatbox');
-    var br = document.createElement('br');
     var messageDiv = document.createElement('div');
 
     messageDiv.classList.add('message', "user");
-    br.classList.add('message', "user");
 
     if (textinput === "") {
         textinput = "Veuillez remplire la barre de texte.";
@@ -16,7 +14,6 @@ function send() {
     messageDiv.textContent = textinput;
 
     chatbox.appendChild(messageDiv);
-    chatbox.appendChild(br);
 
     chatbox.scrollTop = chatbox.scrollHeight;
     let vartest = textinput;
