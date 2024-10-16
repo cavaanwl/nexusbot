@@ -1,45 +1,52 @@
 function send() {
     var textinput = document.getElementById('userInput').value;
-    show(textinput);
-}
-
-function show(message) {
     document.getElementById('userInput').value = ''; 
+
     var chatbox = document.getElementById('chatbox');
     var br = document.createElement('br');
     var messageDiv = document.createElement('div');
+
     messageDiv.classList.add('message', "user");
     br.classList.add('message', "user");
-    messageDiv.textContent = message;
+
+    if (chatbox === "") {
+        chatbox = " ";
+    }
+
+    messageDiv.textContent = textinput;
+
     chatbox.appendChild(messageDiv);
     chatbox.appendChild(br);
-    chatbox.scrollTop = chatbox.scrollHeight; // Scroll vers le bas
-    getBotResponse();
+
+    chatbox.scrollTop = chatbox.scrollHeight;
+    reponses();
 }
 
-function getBotResponse() {
-    if (textinput.includes('bonjour')) {
+function reponses() {
+    let vartest = textinput;
+
+    if (vartest.includes('bonjour')) {
         var reponseDiv = document.createElement('div');
         reponseDiv.classList.add('message', "user");
         reponseDiv.textContent = 'Bonjour! Comment puis-je vous aider ?';
         chatbox.appendChild(reponseDiv);
-    } else if (textinput.includes('comment ça va')) {
+    } else if (vartest.includes('comment ça va')) {
         var reponseDiv = document.createElement('div');
         reponseDiv.classList.add('message', "user");
         reponseDiv.textContent = 'Je suis juste un programme, mais merci de demander !';
         chatbox.appendChild(reponseDiv);
-    } else if (textinput.includes('aide')) {
+    } else if (vartest.includes('aide')) {
         var reponseDiv = document.createElement('div');
         reponseDiv.classList.add('message', "user");
         reponseDiv.textContent = 'Que puis-je faire pour vous ?';
         chatbox.appendChild(reponseDiv);
-    } else if (textinput === '') {
+    } else if (vartest === '') {
         var reponseDiv = document.createElement('div');
         reponseDiv.classList.add('message', "user");
         reponseDiv.textContent = 'Veuillez remplire la barre de texte.';
         chatbox.appendChild(reponseDiv);
     }
-    else if (textinput.includes('contacter')){
+    else if (vartest.includes('contacter')){
         var reponseDiv = document.createElement('div');
         reponseDiv.classList.add('message', "user");
         reponseDiv.textContent = 'Vous pouvez contacter Arcade Studio via l\'adresse mail arcade.studio@gmail.com.';
