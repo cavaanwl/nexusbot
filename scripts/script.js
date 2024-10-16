@@ -9,8 +9,8 @@ function send() {
     messageDiv.classList.add('message', "user");
     br.classList.add('message', "user");
 
-    if (chatbox === "") {
-        chatbox = "<i>Question vide</i>";
+    if (textinput === "") {
+        textinput = "<i>Question vide</i>";
     }
 
     messageDiv.textContent = textinput;
