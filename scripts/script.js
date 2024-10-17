@@ -2,6 +2,7 @@ function send() {
     var textinput = document.getElementById('userInput').value;
     document.getElementById('userInput').value = ''; 
     if (textinput === "") {
+        console.log("...vide...");
         stop();
     }
 
