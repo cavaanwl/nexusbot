@@ -18,7 +18,7 @@ function send() {
     chatbox.scrollTop = chatbox.scrollHeight;
     let vartest = textinput;
 
-    if (vartest === "bonjour") {
+    if (vartest === "bonjour" || vartest==="Bonjour") {
         var reponseDiv = document.createElement('div');
         reponseDiv.classList.add('message', "user");
         reponseDiv.textContent = 'Bonjour! Comment puis-je vous aider ?';
@@ -38,7 +38,12 @@ function send() {
         reponseDiv.classList.add('message', "user");
         reponseDiv.textContent = 'Vous pouvez contacter Arcade Studio via l\'adresse mail arcade.studio@gmail.com.';
         chatbox.appendChild(reponseDiv);
-    }   
+    }
+    else {
+        var reponseDiv = document.createElement('div');
+        reponseDiv.classList.add('message', "user");
+        reponseDiv.textContent = 'Désolé je ne comprends pas.';
+    }
 }
 
 //gestion du clavier :
@@ -49,6 +54,11 @@ document.addEventListener("keydown",(event) => {
 
 		if (touche === "Enter"){
             send();
+			console.log(touche);
+		}
+
+		if (touche === "ArrowUp"){
+            document.getElementById('userInput').value = textinput; 
 			console.log(touche);
 		}
 
