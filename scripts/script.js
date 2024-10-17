@@ -64,7 +64,8 @@ document.addEventListener("keydown",(event) => {
 		}
 
 		if (touche === "ArrowUp"){
-            document.getElementById('userInput').value = vartest; 
+            var vartest = document.getElementById('userInput').value;
+            document.getElementById('userInput').value = vartest;
 			console.log(touche);
 		}
 
